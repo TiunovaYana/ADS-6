@@ -17,10 +17,10 @@ class TPQueue {
         } else {
             int a;
             a = last++;
-            while (((--a) >= first) && (arr[a % size].prior < x.prior)) {
-                arr[(++a) % size] = arr[a % size];
+            while (((a-1) >= first) && (arr[a % size].prior < x.prior)) {
+                arr[(a+1) % size] = arr[a % size];
             }
-            arr[(++a) % size] = x;
+            arr[(a+1) % size] = x;
         }
     }
     T pop() {
