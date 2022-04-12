@@ -17,7 +17,7 @@ class TPQueue {
         } else {
             int a;
             a = last++;
-            while (((a-1) >= first) && (arr[a % size].prior < x.prior)) {
+            while ((a-1 >= first) && (arr[a % size].prior < x.prior)) {
                 arr[(a+1) % size] = arr[a % size];
             }
             arr[(a+1) % size] = x;
